@@ -1,0 +1,862 @@
+[
+    {
+        "id": "71ff4649.54cb88",
+        "type": "tab",
+        "label": "Tugas Akhir",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "c894e7f0.4a7f4",
+        "type": "tab",
+        "label": "Cek RFID (Created by Kukuh)",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "aec58964.63e2f",
+        "type": "tab",
+        "label": "Daftar Kartu Baru",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "bd435ec.26629a",
+        "type": "tab",
+        "label": "Cek RFID (Modified by Gabe)",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "801c0f31.2e22a8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#585254",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Dashboard Locker",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "31956c5c.f7a94c",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "151c7150.c0397f",
+        "type": "ui_group",
+        "z": "",
+        "name": "Selamat Datang",
+        "tab": "31956c5c.f7a94c",
+        "disp": true,
+        "width": "15",
+        "collapse": true
+    },
+    {
+        "id": "eeb07fdd.24dda",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "tethering hp",
+        "broker": "192.168.43.166",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "5d7104fa.5439cc",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "wifi kos",
+        "broker": "192.168.211.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "f57c3f21.89bba",
+        "type": "MySQLdatabase",
+        "z": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "db_rfid",
+        "tz": ""
+    },
+    {
+        "id": "c7be9528.6c1bc",
+        "type": "MySQLdatabase",
+        "z": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "StevesSipyIOTdb",
+        "tz": ""
+    },
+    {
+        "id": "3fb4cbda.019864",
+        "type": "mqtt in",
+        "z": "71ff4649.54cb88",
+        "name": "",
+        "topic": "locker/door",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "eeb07fdd.24dda",
+        "x": 193,
+        "y": 151,
+        "wires": [
+            [
+                "3f8a2c8f.931dcc",
+                "f6ca119f.fc87e8",
+                "9803bcfb.61dfe",
+                "d6d3e24.97d22a"
+            ]
+        ]
+    },
+    {
+        "id": "96329066.f3eb",
+        "type": "ui_text",
+        "z": "71ff4649.54cb88",
+        "group": "151c7150.c0397f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Nama Mahasiswa",
+        "label": "{{msg.payload}}",
+        "format": "{{msg.id}}",
+        "layout": "col-center",
+        "x": 796.2666015625,
+        "y": 105.18331909179688,
+        "wires": [],
+        "info": "BISMILLAHHH WOI BISA MALAM INI"
+    },
+    {
+        "id": "3f8a2c8f.931dcc",
+        "type": "function",
+        "z": "71ff4649.54cb88",
+        "name": "Output Nama",
+        "func": "var name = \"\";\n\nif(msg.payload === '{\"dataType\":\"RFID_Tag\",\"values\":[\" 4D 32 EA 45\"]}')\n{\n    name = {payload: \"Sylvia Dwi Anggraini\"}\n}\nelse if (msg.payload === '{\"dataType\":\"RFID_Tag\",\"values\":[\" C6 54 83 F4\"]}')\n{\n    name = {payload: \"Indrawan Arfid\"}\n}\nelse\n{\n    name = {payload: \"unavailable\"}\n}\n\nreturn name;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 425.26666259765625,
+        "y": 123.33332824707031,
+        "wires": [
+            [
+                "96329066.f3eb"
+            ]
+        ]
+    },
+    {
+        "id": "2a706e55.eaf60a",
+        "type": "ui_text",
+        "z": "71ff4649.54cb88",
+        "group": "151c7150.c0397f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "NIM Mahasiswa",
+        "label": "{{msg.payload}}",
+        "format": "{{msg.id}}",
+        "layout": "col-center",
+        "x": 812.88330078125,
+        "y": 197.88333129882812,
+        "wires": [],
+        "info": "BISMILLAHHH WOI BISA MALAM INI"
+    },
+    {
+        "id": "f6ca119f.fc87e8",
+        "type": "function",
+        "z": "71ff4649.54cb88",
+        "name": "Output Nim",
+        "func": "var nim = \"\";\n\nif(msg.payload === '{\"dataType\":\"RFID_Tag\",\"values\":[\" 4D 32 EA 45\"]}')\n{\n    nim = {payload: \"1301154469\"}\n}\nelse if (msg.payload === '{\"dataType\":\"RFID_Tag\",\"values\":[\" C6 54 83 F4\"]}')\n{\n    nim = {payload: \"1201164499\"}\n}\nelse\n{\n    // return[\"Data tidak tersedia\"];\n    nim = {payload: \"unavailable\"}\n}\n\nreturn nim;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 415.88336181640625,
+        "y": 198.03335571289062,
+        "wires": [
+            [
+                "2a706e55.eaf60a"
+            ]
+        ]
+    },
+    {
+        "id": "a22e7b57.c82cd",
+        "type": "ui_text",
+        "z": "71ff4649.54cb88",
+        "group": "151c7150.c0397f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Status Mahasiswa",
+        "label": "{{msg.payload}}",
+        "format": "{{msg.id}}",
+        "layout": "col-center",
+        "x": 811.88330078125,
+        "y": 267.8833312988281,
+        "wires": [],
+        "info": "BISMILLAHHH WOI BISA MALAM INI"
+    },
+    {
+        "id": "9803bcfb.61dfe",
+        "type": "function",
+        "z": "71ff4649.54cb88",
+        "name": "Output Status",
+        "func": "var status = \"\";\n\nif(msg.payload === '{\"dataType\":\"RFID_Tag\",\"values\":[\" 4D 32 EA 45\"]}')\n{\n    status = {payload: \"Mahasiswa\"}\n}\nelse if (msg.payload === '{\"dataType\":\"RFID_Tag\",\"values\":[\" C6 54 83 F4\"]}')\n{\n    status = {payload: \"Alumni\"}\n}\nelse\n{\n    status = {payload: \"unavailable\"}\n}\n\nreturn status;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 419.88336181640625,
+        "y": 262.0333251953125,
+        "wires": [
+            [
+                "a22e7b57.c82cd"
+            ]
+        ]
+    },
+    {
+        "id": "d6d3e24.97d22a",
+        "type": "function",
+        "z": "71ff4649.54cb88",
+        "name": "Output akses",
+        "func": "var akses = \"\";\n\nif(msg.payload === '{\"dataType\":\"RFID_Tag\",\"values\":[\" 4D 32 EA 45\"]}')\n{\n    akses = {payload: \"Akses Masuk\"}\n}\nelse if (msg.payload === '{\"dataType\":\"RFID_Tag\",\"values\":[\" C6 54 83 F4\"]}')\n{\n    akses = {payload: \"Akses Tidak Diterima\"}\n}\nelse\n{\n    akses = {payload: \"Akses Tidak Diterima\"}\n}\n\nreturn akses;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 418.88336181640625,
+        "y": 336.0333251953125,
+        "wires": [
+            [
+                "db4de013.78828",
+                "8fff8875.43b91"
+            ]
+        ]
+    },
+    {
+        "id": "db4de013.78828",
+        "type": "mqtt out",
+        "z": "71ff4649.54cb88",
+        "name": "",
+        "topic": "locker/door_status",
+        "qos": "",
+        "retain": "",
+        "broker": "eeb07fdd.24dda",
+        "x": 807.2666015625,
+        "y": 410.0500183105469,
+        "wires": []
+    },
+    {
+        "id": "8fff8875.43b91",
+        "type": "ui_text",
+        "z": "71ff4649.54cb88",
+        "group": "151c7150.c0397f",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Hak Akses Mahasiswa",
+        "label": "{{msg.payload}}",
+        "format": "{{msg.id}}",
+        "layout": "col-center",
+        "x": 824.88330078125,
+        "y": 333.8833312988281,
+        "wires": [],
+        "info": "BISMILLAHHH WOI BISA MALAM INI"
+    },
+    {
+        "id": "175a0a4b.aeb9ee",
+        "type": "mqtt in",
+        "z": "c894e7f0.4a7f4",
+        "name": "",
+        "topic": "locker/door",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "eeb07fdd.24dda",
+        "x": 90.88333129882812,
+        "y": 77.88333129882812,
+        "wires": [
+            [
+                "1c42c878.a5dff8"
+            ]
+        ]
+    },
+    {
+        "id": "1c42c878.a5dff8",
+        "type": "function",
+        "z": "c894e7f0.4a7f4",
+        "name": "Enkripsi Kartu",
+        "func": "var id_kartu = JSON.parse(msg.payload).values[0]\n\nmsg.payload = id_kartu\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 259.7667236328125,
+        "y": 78.91668701171875,
+        "wires": [
+            [
+                "3522e7ed.f7d828"
+            ]
+        ]
+    },
+    {
+        "id": "46eabde8.00521c",
+        "type": "mysql",
+        "z": "c894e7f0.4a7f4",
+        "mydb": "f57c3f21.89bba",
+        "name": "db_rfid",
+        "x": 581.2666015625,
+        "y": 184.63333129882812,
+        "wires": [
+            [
+                "54761f1b.6be788"
+            ]
+        ]
+    },
+    {
+        "id": "54761f1b.6be788",
+        "type": "function",
+        "z": "c894e7f0.4a7f4",
+        "name": "Cek Akses",
+        "func": "var result = []\nstatus = \"Kartu Belum Terdaftar\"\ndb = msg.payload\nresult[1] = msg.payload[0]\nif (db.length >= 1) {\n    if (db[0]['status'] === 'Mahasiswa Aktif') {\n        result[0] = \"Akses Dizinkan\"\n        result[1] = msg.payload[0]\n    } else {\n        result[0] = \"Akses Tidak Dizinkan\"\n        result[1] = msg.payload[0]\n    }\n} else {\n    result[0] = \"Kartu Belum Terdaftar\"\n    result[1] = \"\"\n}\n\nmsg.payload = result\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 782.5,
+        "y": 82.5,
+        "wires": [
+            [
+                "7c20567a.b1157",
+                "948b35cf.7ee298",
+                "29b25ddc.dd7f8a",
+                "a104b610.2f4c38",
+                "aa86a0fd.ab6e48",
+                "cf105fc9.fc362"
+            ]
+        ]
+    },
+    {
+        "id": "7c20567a.b1157",
+        "type": "mqtt out",
+        "z": "c894e7f0.4a7f4",
+        "name": "",
+        "topic": "locker/door_status",
+        "qos": "",
+        "retain": "",
+        "broker": "eeb07fdd.24dda",
+        "x": 1028.75,
+        "y": 82.75,
+        "wires": []
+    },
+    {
+        "id": "a104b610.2f4c38",
+        "type": "debug",
+        "z": "c894e7f0.4a7f4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1028.86669921875,
+        "y": 137.75,
+        "wires": []
+    },
+    {
+        "id": "948b35cf.7ee298",
+        "type": "ui_text",
+        "z": "c894e7f0.4a7f4",
+        "group": "151c7150.c0397f",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Check Akses : ",
+        "format": "{{msg.payload[0]}}",
+        "layout": "row-left",
+        "x": 971.86669921875,
+        "y": 203.25,
+        "wires": []
+    },
+    {
+        "id": "29b25ddc.dd7f8a",
+        "type": "ui_text",
+        "z": "c894e7f0.4a7f4",
+        "group": "151c7150.c0397f",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Nama : ",
+        "format": "{{msg.payload[1]['nama']}}",
+        "layout": "row-left",
+        "x": 943.75,
+        "y": 242.75,
+        "wires": []
+    },
+    {
+        "id": "2ca1d9ae.725d8e",
+        "type": "mqtt in",
+        "z": "aec58964.63e2f",
+        "name": "",
+        "topic": "locker/door",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "eeb07fdd.24dda",
+        "x": 105.75,
+        "y": 100.75,
+        "wires": [
+            [
+                "6a4913b.720d0ec"
+            ]
+        ]
+    },
+    {
+        "id": "a66ea192.aade",
+        "type": "mysql",
+        "z": "aec58964.63e2f",
+        "mydb": "f57c3f21.89bba",
+        "name": "db_rfid",
+        "x": 916.75,
+        "y": 241,
+        "wires": [
+            [
+                "7f6b61c8.ae9458"
+            ]
+        ]
+    },
+    {
+        "id": "ab8c3b97.f1ec68",
+        "type": "digest",
+        "z": "aec58964.63e2f",
+        "name": "Encrypt Sha256",
+        "algorithm": "SHA256",
+        "x": 580.5,
+        "y": 160.5,
+        "wires": [
+            [
+                "57595fe9.bdee68"
+            ]
+        ]
+    },
+    {
+        "id": "3522e7ed.f7d828",
+        "type": "digest",
+        "z": "c894e7f0.4a7f4",
+        "name": "Encrypt Sha256",
+        "algorithm": "SHA256",
+        "x": 463.75,
+        "y": 78.75,
+        "wires": [
+            [
+                "8b289e7c.0a5c1"
+            ]
+        ]
+    },
+    {
+        "id": "8b289e7c.0a5c1",
+        "type": "function",
+        "z": "c894e7f0.4a7f4",
+        "name": "Output DB",
+        "func": "msg.topic = \"SELECT * FROM rfid WHERE uid = '\" + msg.payload + \"' ;\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 368.75,
+        "y": 184.75,
+        "wires": [
+            [
+                "46eabde8.00521c"
+            ]
+        ]
+    },
+    {
+        "id": "6a4913b.720d0ec",
+        "type": "function",
+        "z": "aec58964.63e2f",
+        "name": "Enkripsi Kartu",
+        "func": "var id_kartu = JSON.parse(msg.payload).values[0]\n\nmsg.payload = id_kartu\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 349.75,
+        "y": 159.75,
+        "wires": [
+            [
+                "ab8c3b97.f1ec68"
+            ]
+        ]
+    },
+    {
+        "id": "57595fe9.bdee68",
+        "type": "function",
+        "z": "aec58964.63e2f",
+        "name": "Input DB",
+        "func": "msg.topic = \"INSERT INTO `rfid`(`uid`, `nama`, `nim`, `status`) VALUES ('\" + msg.payload + \"' , 'Saye' , '1301151234' , 'Mahasiswa Aktif')\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 787.75,
+        "y": 160.75,
+        "wires": [
+            [
+                "a66ea192.aade"
+            ]
+        ]
+    },
+    {
+        "id": "7f6b61c8.ae9458",
+        "type": "debug",
+        "z": "aec58964.63e2f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1031.86669921875,
+        "y": 155.75,
+        "wires": []
+    },
+    {
+        "id": "aa86a0fd.ab6e48",
+        "type": "ui_text",
+        "z": "c894e7f0.4a7f4",
+        "group": "151c7150.c0397f",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "NIM : ",
+        "format": "{{msg.payload[1]['nim']}}",
+        "layout": "row-left",
+        "x": 943.75,
+        "y": 280.75,
+        "wires": []
+    },
+    {
+        "id": "cf105fc9.fc362",
+        "type": "ui_text",
+        "z": "c894e7f0.4a7f4",
+        "group": "151c7150.c0397f",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Status :",
+        "format": "{{msg.payload[1]['status']}}",
+        "layout": "row-left",
+        "x": 954.75,
+        "y": 318.75,
+        "wires": []
+    },
+    {
+        "id": "575f5cf8.135d5c",
+        "type": "mqtt in",
+        "z": "bd435ec.26629a",
+        "name": "",
+        "topic": "locker/door",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "eeb07fdd.24dda",
+        "x": 104.75,
+        "y": 202,
+        "wires": [
+            [
+                "5701855f.54f03c"
+            ]
+        ]
+    },
+    {
+        "id": "5701855f.54f03c",
+        "type": "function",
+        "z": "bd435ec.26629a",
+        "name": "Enkripsi Kartu",
+        "func": "var id_kartu = JSON.parse(msg.payload).values[0]\n\nmsg.payload = id_kartu\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 273.6333923339844,
+        "y": 203.03335571289062,
+        "wires": [
+            [
+                "172cc49e.d6eabb"
+            ]
+        ]
+    },
+    {
+        "id": "8c0f2608.141778",
+        "type": "mysql",
+        "z": "bd435ec.26629a",
+        "mydb": "f57c3f21.89bba",
+        "name": "db_rfid",
+        "x": 595.1332702636719,
+        "y": 308.75,
+        "wires": [
+            [
+                "853f8fa0.a163e"
+            ]
+        ]
+    },
+    {
+        "id": "853f8fa0.a163e",
+        "type": "function",
+        "z": "bd435ec.26629a",
+        "name": "Cek Akses",
+        "func": "var result = []\n// door_lock =0;\nstatus = \"Kartu Belum Terdaftar\"\ndb = msg.payload\nresult[1] = msg.payload[0]\nif (db.length >= 1) {\n    if (db[0]['status'] === 'Mahasiswa Aktif') {\n        result[0] = \"Akses Dizinkan\"\n        result[1] = msg.payload[0]\n    } else {\n        result[0] = \"Akses Tidak Dizinkan\"\n        result[1] = msg.payload[0]\n    }\n} else {\n    result[0] = \"Kartu Belum Terdaftar\"\n    result[1] = \"\"\n}\n\nmsg.payload = result\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 796.3666687011719,
+        "y": 206.61666870117188,
+        "wires": [
+            [
+                "9b9fc9a2.c90888",
+                "82994a6c.6148c8",
+                "da672784.85d24",
+                "888d5bda.d254",
+                "8e0ed4dd.6956c8"
+            ]
+        ]
+    },
+    {
+        "id": "4cbf35a.e86f54c",
+        "type": "mqtt out",
+        "z": "bd435ec.26629a",
+        "name": "",
+        "topic": "locker/door_status",
+        "qos": "2",
+        "retain": "",
+        "broker": "eeb07fdd.24dda",
+        "x": 1086.61669921875,
+        "y": 132.86666870117188,
+        "wires": []
+    },
+    {
+        "id": "ae401c55.ca6e88",
+        "type": "debug",
+        "z": "bd435ec.26629a",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1022.7333984375,
+        "y": 236.86666870117188,
+        "wires": []
+    },
+    {
+        "id": "9b9fc9a2.c90888",
+        "type": "ui_text",
+        "z": "bd435ec.26629a",
+        "group": "151c7150.c0397f",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Check Akses : ",
+        "format": "{{msg.payload[0]}}",
+        "layout": "row-left",
+        "x": 985.7333679199219,
+        "y": 327.3666687011719,
+        "wires": []
+    },
+    {
+        "id": "82994a6c.6148c8",
+        "type": "ui_text",
+        "z": "bd435ec.26629a",
+        "group": "151c7150.c0397f",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Nama : ",
+        "format": "{{msg.payload[1]['nama']}}",
+        "layout": "row-left",
+        "x": 957.61669921875,
+        "y": 362.8666687011719,
+        "wires": []
+    },
+    {
+        "id": "172cc49e.d6eabb",
+        "type": "digest",
+        "z": "bd435ec.26629a",
+        "name": "Encrypt Sha256",
+        "algorithm": "SHA256",
+        "x": 477.6166687011719,
+        "y": 202.86666870117188,
+        "wires": [
+            [
+                "bf846abd.6a15b8"
+            ]
+        ]
+    },
+    {
+        "id": "bf846abd.6a15b8",
+        "type": "function",
+        "z": "bd435ec.26629a",
+        "name": "Output DB",
+        "func": "msg.topic = \"SELECT * FROM rfid WHERE uid = '\" + msg.payload + \"' ;\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 382.6166687011719,
+        "y": 308.8666687011719,
+        "wires": [
+            [
+                "8c0f2608.141778"
+            ]
+        ]
+    },
+    {
+        "id": "da672784.85d24",
+        "type": "ui_text",
+        "z": "bd435ec.26629a",
+        "group": "151c7150.c0397f",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "NIM : ",
+        "format": "{{msg.payload[1]['nim']}}",
+        "layout": "row-left",
+        "x": 957.6166687011719,
+        "y": 404.8666687011719,
+        "wires": []
+    },
+    {
+        "id": "888d5bda.d254",
+        "type": "ui_text",
+        "z": "bd435ec.26629a",
+        "group": "151c7150.c0397f",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Status :",
+        "format": "{{msg.payload[1]['status']}}",
+        "layout": "row-left",
+        "x": 968.6166687011719,
+        "y": 442.8666687011719,
+        "wires": []
+    },
+    {
+        "id": "8e0ed4dd.6956c8",
+        "type": "function",
+        "z": "bd435ec.26629a",
+        "name": "Arduino MQTT Lock",
+        "func": "var newMSG = msg.payload[0];\nstatus = 0\n// var newMsg = msg.payload\n\n// var status = 0\nif (newMSG === \"Akses Dizinkan\") {\n    status = 1\n} else {\n    status = 0\n}\nmsg.payload = status\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 872.86669921875,
+        "y": 88,
+        "wires": [
+            [
+                "4cbf35a.e86f54c",
+                "ae401c55.ca6e88"
+            ]
+        ]
+    }
+]
